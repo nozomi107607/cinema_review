@@ -38,4 +38,4 @@ https://docs.google.com/spreadsheets/d/15iSsRyb-P71gQTg_tix5GT1N0UypoHnmEf7eoVNY
 
 ## 使用素材
 - 検討中です。
-- *本アプリでは、映画作品の画像は使用致しません。
+※本アプリでは、映画作品の画像は使用致しません。
