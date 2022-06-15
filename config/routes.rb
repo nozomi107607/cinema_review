@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
   namespace :public do
     resources :users, only: [:show, :edit, :update]
-    resources :films, only: []
+    resources :films, only: [:new, :create, :index, :show, :destroy, :edit, :update]
 
   end
 
