@@ -1,0 +1,8 @@
+<div>
+  <h3>マイページ</h3>
+  <%= @user.user_name %>
+  <%= @user.introduction %>
+</div>
+<div>
+  <%= link_to "編集する", edit_public_user_path(@user.id) %>
+</div>
