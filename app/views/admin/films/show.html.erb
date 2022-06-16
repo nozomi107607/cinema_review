@@ -1,0 +1,20 @@
+<div>
+  <p>Title</p>
+    <div><%= @film.film_title %></div>
+    <p>Introduction</p><%= @film.introduction %>
+    <p>review</p><%= @film.body %>
+
+    <p>評価 :<%= @film.evaluation%>点</p>
+      <div id="star-rate<%= @film.id %>"></div>
+      <script>
+        $('#star-rate<%= @film.id %>').raty({
+          size      : 36,
+          starOff   : '<%= asset_path('star-off.png') %>',
+          starOn    : '<%= asset_path('star-on.png') %>',
+          half      : false,
+          readOnly: true,
+          score: <%= @film.evaluation %>,
+        });
+      </script>
+  <%= link_to "Destroy", admin_film_path(@film), method: :delete %>
+  </div>

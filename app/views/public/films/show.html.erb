@@ -16,6 +16,9 @@
         score: <%= @film.evaluation %>,
       });
     </script>
+    <% if @film.user == current_user %>
+    <%= link_to "Edit", edit_public_film_path(@film.id) %>
     <%= link_to "Destroy", public_film_path(@film), method: :delete %>
+    <% end %>
 
 </div>

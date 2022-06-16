@@ -11,4 +11,8 @@ class User < ApplicationRecord
       user.password = SecureRandom.urlsafe_base64
       end
   end
+
+  def films
+    return Film.where(user_id: self.id)
+  end
 end
