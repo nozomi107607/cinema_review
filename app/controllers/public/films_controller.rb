@@ -13,6 +13,7 @@ class Public::FilmsController < ApplicationController
 
   def index
     @films = Film.all
+    @user = User.find(current_user.id)
   end
 
   def show

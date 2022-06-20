@@ -10,6 +10,7 @@ Rails.application.routes.draw do
 
   root to: "public/homes#top"
   post '/guests/guest_sign_in', to: 'public/guests#new_guest'
+  get '/about' => 'public/homes#about', as: 'about'
 
   namespace :public do
     resources :users, only: [:show, :edit, :update]

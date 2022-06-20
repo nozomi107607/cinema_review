@@ -1,24 +1,36 @@
-<div>
-  <div>詳細</div>
-  <p>Title</p>
-  <div><%= @film.film_title %></div>
-  <p>Introduction</p><%= @film.introduction %>
-  <p>Body</p><%= @film.body %>
-  <p>評価 :<%= @film.evaluation%>点</p>
-    <div id="star-rate<%= @film.id %>"></div>
-    <script>
-      $('#star-rate<%= @film.id%>').raty({
-        size      : 36,
-        starOff   : '<%= asset_path('star-off.png') %>',
-        starOn    : '<%= asset_path('star-on.png') %>',
-        half      : false,
-        readOnly: true,
-        score: <%= @film.evaluation %>,
-      });
-    </script>
-    <% if @film.user == current_user %>
-    <%= link_to "Edit", edit_public_film_path(@film.id) %>
-    <%= link_to "Destroy", public_film_path(@film), method: :delete %>
-    <% end %>
-
+<div class="container">
+  <div class="row d-flex justify-content-center">
+    <div class="col-md-8">
+      <h3 class="pb-3 mb-4 font-italic border-bottom"><%= @film.introduction %></h3>
+      <div>
+        <h2><%= @film.film_title %></h2>
+        <p><%= @film.created_at %></p>
+      </div>
+      <div>
+        <p><%= @film.body %></p>
+      </div>
+      <div>
+        <p>評価 :<%= @film.evaluation%>点</p>
+        <div id="star-rate<%= @film.id %>"></div>
+        <script>
+          $('#star-rate<%= @film.id%>').raty({
+            size      : 36,
+            starOff   : '<%= asset_path('star-off.png') %>',
+            starOn    : '<%= asset_path('star-on.png') %>',
+            half      : false,
+            readOnly: true,
+            score: <%= @film.evaluation %>,
+          });
+        </script>
+      </div>
+      <div>
+        <% if @film.user_id == current_user.id %>
+          <%= link_to "Edit", edit_public_film_path(@film.id), class:"text-secondary" %> /
+          <%= link_to "Destroy", public_film_path(@film), method: :delete, class:"text-secondary" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
 </div>
+
+

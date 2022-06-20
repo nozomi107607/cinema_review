@@ -1,10 +1,10 @@
 class Film < ApplicationRecord
   validates :user_id, {presence: true}
 
-  belongs_to :user
+  belongs_to :user, optional: true
 
   def user
-    return FIlm.find_by(id: self.id)
+    return Film.where(id: self.id)
   end
 
 
