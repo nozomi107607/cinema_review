@@ -24,8 +24,6 @@
 ・次に何の映画を鑑賞するかを探す時<br>
 ・観たい映画がどんな作品なのか知りたい時<br>
 
-## 設計書
-
 ## 実装機能リストURL
 https://docs.google.com/spreadsheets/d/15iSsRyb-P71gQTg_tix5GT1N0UypoHnmEf7eoVNYoes/edit?usp=sharing
 
@@ -37,5 +35,5 @@ https://docs.google.com/spreadsheets/d/15iSsRyb-P71gQTg_tix5GT1N0UypoHnmEf7eoVNY
 - IDE：Cloud9
 
 ## 使用素材
-- 検討中です。
+- Font Awesome
 ※本アプリでは、映画作品の画像は使用致しません。
